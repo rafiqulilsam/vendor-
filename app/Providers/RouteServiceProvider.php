@@ -1,12 +1,17 @@
 <?php
 
 namespace App\Providers;
-
-use Illuminate\Cache\RateLimiting\Limit;
-use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use App\Models\User;
+use App\Models\admin\Unit;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\RateLimiter;
+use App\Models\admin\Product;
+use App\Models\admin\Category;
+use App\Models\admin\Purchase;
+use App\Models\admin\Warehouse;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -44,14 +49,19 @@ class RouteServiceProvider extends ServiceProvider
                 ->middleware('web')
                 ->group(base_path('routes/admin.php'));
 
+            // Route::prefix('admin')
+            // ->name('admin.')
+            // ->middleware('web')
+            // ->group(base_path('routes/poss.php'));
+
 
         });
-        // Route::model('category', Category::class);
-        // Route::model('product', Product::class);
-        // Route::model('warehouse', Warehouse::class);
-        // Route::model('purchase', Purchase::class);
-        // Route::model('user', User::class);
-        // Route::model('unit', Unit::class);
+        Route::model('category', Category::class);
+        Route::model('product', Product::class);
+        Route::model('warehouse', Warehouse::class);
+        Route::model('purchase', Purchase::class);
+        Route::model('user', User::class);
+        Route::model('unit', Unit::class);
     }
 
     /**

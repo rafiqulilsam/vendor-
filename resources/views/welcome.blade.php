@@ -1,13 +1,19 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE HTML>
 <html>
 
 <head>
-    <title>Glance Design Dashboard an Admin Panel Category Flat Bootstrap Responsive Website Template | Home ::
-        w3layouts</title>
+    <title>Easy Admin Panel an Admin Panel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <meta name="keywords" content="Easy Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script type="application/x-javascript">
         addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
@@ -17,1013 +23,774 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
             window.scrollTo(0, 1);
         }
     </script>
-
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('/') }}admin/css/bootstrap.css" rel='stylesheet' type='text/css' />
-
+    <link href="{{ asset('/') }}admin/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
     <!-- Custom CSS -->
     <link href="{{ asset('/') }}admin/css/style.css" rel='stylesheet' type='text/css' />
-
-    <!-- font-awesome icons CSS -->
+    <!-- Graph CSS -->
     <link href="{{ asset('/') }}admin/css/font-awesome.css" rel="stylesheet">
-    <!-- //font-awesome icons CSS-->
-
-    <!-- side nav css file -->
-    <link href='{{ asset('/') }}admin/css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- //side nav css file -->
-
-    <!-- js-->
-    <script src="{{ asset('/') }}admin/js/jquery-1.11.1.min.js"></script>
-    <script src="{{ asset('/') }}admin/js/modernizr.custom.js"></script>
-
-    <!--webfonts-->
-    <link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext"
-        rel="stylesheet">
-    <!--//webfonts-->
-
+    <!-- jQuery -->
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="{{ asset('/') }}admin/css/icon-font.min.css" type='text/css' />
+    <!-- //lined-icons -->
     <!-- chart -->
     <script src="{{ asset('/') }}admin/js/Chart.js"></script>
     <!-- //chart -->
-
-    <!-- Metis Menu -->
-    <script src="{{ asset('/') }}admin/js/metisMenu.min.js"></script>
-    <script src="{{ asset('/') }}admin/js/custom.js"></script>
-    <link href="{{ asset('/') }}admin/css/custom.css" rel="stylesheet">
-    <!--//Metis Menu -->
-    <style>
-        #chartdiv {
-            width: 100%;
-            height: 295px;
-        }
-
-    </style>
-    <!--pie-chart -->
-    <!-- index page sales reviews visitors pie chart -->
-    <script src="{{ asset('/') }}admin/js/pie-chart.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#demo-pie-1').pieChart({
-                barColor: '#2dde98',
-                trackColor: '#eee',
-                lineCap: 'round',
-                lineWidth: 8,
-                onStep: function(from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-
-            $('#demo-pie-2').pieChart({
-                barColor: '#8e43e7',
-                trackColor: '#eee',
-                lineCap: 'butt',
-                lineWidth: 8,
-                onStep: function(from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-
-            $('#demo-pie-3').pieChart({
-                barColor: '#ffc168',
-                trackColor: '#eee',
-                lineCap: 'square',
-                lineWidth: 8,
-                onStep: function(from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-
-
-        });
-    </script>
-    <!-- //pie-chart -->
-    <!-- index page sales reviews visitors pie chart -->
-
-    <!-- requried-jsfiles-for owl -->
-    <link href="{{ asset('/') }}admin/css/owl.carousel.css" rel="stylesheet">
-    <script src="{{ asset('/') }}admin/js/owl.carousel.js"></script>
+    <!--animate-->
+    <link href="{{ asset('/') }}admin/css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="{{ asset('/') }}admin/js/wow.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $("#owl-demo").owlCarousel({
-                items: 3,
-                lazyLoad: true,
-                autoPlay: true,
-                pagination: true,
-                nav: true,
-            });
-        });
+        new WOW().init();
     </script>
-    <!-- //requried-jsfiles-for owl -->
+    <!--//end-animate-->
+    <!----webfonts--->
+    <link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic'
+        rel='stylesheet' type='text/css'>
+    <!---//webfonts--->
+    <!-- Meters graphs -->
+    <script src="{{ asset('/') }}admin/js/jquery-1.10.2.min.js"></script>
+    <!-- Placed js at the end of the document so the pages load faster -->
+
 </head>
 
-<body class="cbp-spmenu-push">
-    <div class="main-content">
+<body class="sticky-header left-side-collapsed" onload="initMap()">
+    <section>
+        <!-- left side start-->
+        <div class="left-side sticky-left-side">
 
-        <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-            <!--left-fixed -navigation-->
-            <aside class="sidebar-left">
-                <nav class="navbar navbar-inverse">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target=".collapse" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <h1><a class="navbar-brand" href="index.html"><span class="fa fa-area-chart"></span>
-                                R2 friends<span class="dashboard_text">dashboard</span></a></h1>
-                    </div>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="sidebar-menu">
-                            <li class="header">MAIN NAVIGATION</li>
-                            <li class="treeview">
-                                <a href="index.html">
-                                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                                </a>
-                            </li>
+            <!--logo and iconic logo start-->
+            <div class="logo">
+                <h1><a href="index.html">Easy <span>Admin</span></a></h1>
+            </div>
+            <div class="logo-icon text-center">
+                <a href="index.html"><i class="lnr lnr-home"></i> </a>
+            </div>
 
-                            <li class="treeview">
+            <!--logo and iconic logo end-->
+            <div class="left-side-inner">
 
-                            <li class="treeview">
-                                <a href="#">
-                                    <i class="fa fa-laptop"></i>
-                                    <span>UI Elements</span>
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="general.html"><i class="fa fa-angle-right"></i> General</a></li>
-                                    <li><a href="icons.html"><i class="fa fa-angle-right"></i> Icons</a></li>
-
-                                </ul>
-                            </li>
-
-
-                            <li class="treeview">
-                                <a href="#">
-                                    <i class="fa fa-edit"></i> <span>Forms</span>
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="forms.html"><i class="fa fa-angle-right"></i> General Forms</a></li>
-                                    <li><a href="validation.html"><i class="fa fa-angle-right"></i> Form Validations</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                            <li class="treeview">
-                                <a href="#">
-                                    <i class="fa fa-envelope"></i> <span>Mailbox </span>
-
-                                    <i class="fa fa-angle-left pull-right"></i></a>
-
-                                <ul class="treeview-menu">
-                                    <li><a href="inbox.html"><i class="fa fa-angle-right"></i> Mail Inbox </a></li>
-                                    <li><a href="compose.html"><i class="fa fa-angle-right"></i> Compose Mail </a></li>
-                                </ul>
-                            </li>
-
-                            <li class="treeview">
-                                <a href="#">
-                                    <i class="fa fa-folder"></i> <span>Examples</span>
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="login.html"><i class="fa fa-angle-right"></i> Login</a></li>
-                                    <li><a href="signup.html"><i class="fa fa-angle-right"></i> Register</a></li>
-
-                                </ul>
-                            </li>
-                            <li class="header">Logout</li>
-
-                            <li><a href="#"> <span>user profile</span></a></li>
+                <!--sidebar nav start-->
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                    <li class="active"><a href="index.html"><i
+                                class="lnr lnr-power-switch"></i><span>Dashboard</span></a></li>
+                    <li class="menu-list">
+                        <a href="#"><i class="lnr lnr-cog"></i>
+                            <span>Components</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href="grids.html">Grids</a> </li>
+                            <li><a href="widgets.html">Widgets</a></li>
                         </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
-                </nav>
-            </aside>
-        </div>
-        <!--left-fixed -navigation-->
+                    </li>
+                    <li class="menu-list">
+                        <a href="#"><i class="lnr lnr-cog"></i>
+                            <span>Components</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href="grids.html">Grids</a> </li>
+                            <li><a href="widgets.html">Widgets</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-list">
+                        <a href="#"><i class="lnr lnr-cog"></i>
+                            <span>Components</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href="grids.html">Grids</a> </li>
+                            <li><a href="widgets.html">Widgets</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-list">
+                        <a href="#"><i class="lnr lnr-cog"></i>
+                            <span>Components</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href="grids.html">Grids</a> </li>
+                            <li><a href="widgets.html">Widgets</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-list">
+                        <a href="#"><i class="lnr lnr-cog"></i>
+                            <span>Components</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href="grids.html">Grids</a> </li>
+                            <li><a href="widgets.html">Widgets</a></li>
+                        </ul>
+                    </li>
 
-        <!-- header-starts -->
-        <div class="sticky-header header-section ">
-            <div class="header-left">
-                <!--toggle button start-->
-                <button id="showLeftPush"><i class="fa fa-bars"></i></button>
-                <!--toggle button end-->
-                <div class="profile_details_left">
-                    <!--notifications of menu start -->
-                    <ul class="nofitications-dropdown">
-
-
-                    </ul>
-                    <div class="clearfix"> </div>
-                </div>
-                <!--notification menu end -->
-                <div class="clearfix"> </div>
+                    <li><a href="forms.html"><i class="lnr lnr-spell-check"></i> <span>Forms</span></a></li>
+                    <li><a href="tables.html"><i class="lnr lnr-menu"></i> <span>Tables</span></a></li>
+                    <li class="menu-list"><a href="#"><i class="lnr lnr-envelope"></i> <span>MailBox</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href="inbox.html">Inbox</a> </li>
+                            <li><a href="compose-mail.html">Composewwwwwww Mail</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-list"><a href="#"><i class="lnr lnr-indent-increase"></i> <span>Menu
+                                Levels</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href="charts.html">Basic Charts</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="codes.html"><i class="lnr lnr-pencil"></i> <span>Typography</span></a></li>
+                    <li><a href="media.html"><i class="lnr lnr-select"></i> <span>Media Css</span></a></li>
+                    <li class="menu-list"><a href="#"><i class="lnr lnr-book"></i> <span>Pages</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href="sign-in.html">Sign In</a> </li>
+                            <li><a href="sign-up.html">Sign Up</a></li>
+                            <li><a href="blank_page.html">Blank Page</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--sidebar nav end-->
             </div>
-            <div class="header-right">
-
-
-                <!--search-box-->
-                <div class="search-box">
-                    <form class="input">
-                        <input class="sb-search-input input__field--madoka" placeholder="Search..." type="search"
-                            id="input-31" />
-                        <label class="input__label" for="input-31">
-                            <svg class="graphic" width="100%" height="100%" viewBox="0 0 404 77"
-                                preserveAspectRatio="none">
-                                <path d="m0,0l404,0l0,77l-404,0l0,-77z" />
-                            </svg>
-                        </label>
-                    </form>
-                </div>
-                <!--//end-search-box-->
-
-                <div class="profile_details">
-                    <ul>
-                        <li class="dropdown profile_details_drop">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <div class="profile_img">
-                                    <span class="prfil-img"><img src="images/2.jpg" alt=""> </span>
-                                    <div class="user-name">
-                                        <p>Admin Name</p>
-                                        <span>Administrator</span>
-                                    </div>
-                                    <i class="fa fa-angle-down lnr"></i>
-                                    <i class="fa fa-angle-up lnr"></i>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                            <ul class="dropdown-menu drp-mnu">
-                                <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
-                                <li> <a href="#"><i class="fa fa-user"></i> My Account</a> </li>
-                                <li> <a href="#"><i class="fa fa-suitcase"></i> Profile</a> </li>
-                                <li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-            <div class="clearfix"> </div>
         </div>
-        <!-- //header-ends -->
+        
+        <!-- left side end-->
+
         <!-- main content start-->
-        <div id="page-wrapper">
+        <div class="main-content">
+            <!-- header-starts -->
+            <div class="header-section">
 
-            <div class="main-page">
-                <div class="col_3">
+                <!--toggle button start-->
+                <a class="toggle-btn  menu-collapsed"><i class="fa fa-bars"></i></a>
+                <!--toggle button end-->
 
+                <!--notification menu start -->
+                {{-- <div class="menu-right">
+                    <div class="user-panel-top">
+                        <div class="profile_details_left">
+                            <ul class="nofitications-dropdown">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+                                            class="fa fa-envelope"></i><span class="badge">3</span></a>
 
-                    <div class="clearfix"> </div>
-                </div>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="notification_header">
+                                                <h3>You have 3 new messages</h3>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">
+                                                <div class="user_img"><img src="images/1.png" alt=""></div>
+                                                <div class="notification_desc">
+                                                    <p>Lorem ipsum dolor sit amet</p>
+                                                    <p><span>1 hour ago</span></p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a></li>
+                                        <li class="odd"><a href="#">
+                                                <div class="user_img"><img src="images/1.png" alt=""></div>
+                                                <div class="notification_desc">
+                                                    <p>Lorem ipsum dolor sit amet </p>
+                                                    <p><span>1 hour ago</span></p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a></li>
+                                        <li><a href="#">
+                                                <div class="user_img"><img src="images/1.png" alt=""></div>
+                                                <div class="notification_desc">
+                                                    <p>Lorem ipsum dolor sit amet </p>
+                                                    <p><span>1 hour ago</span></p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a></li>
+                                        <li>
+                                            <div class="notification_bottom">
+                                                <a href="#">See all messages</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="login_box" id="loginContainer">
+                                    <div class="search-box">
+                                        <div id="sb-search" class="sb-search">
+                                            <form>
+                                                <input class="sb-search-input" placeholder="Enter your search term..."
+                                                    type="search" id="search">
+                                                <input class="sb-search-submit" type="submit" value="">
+                                                <span class="sb-icon-search"> </span>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- search-scripts -->
+                                    <script src="{{ asset('/') }}admin/js/classie.js"></script>
+                                    <script src="{{ asset('/') }}admin/js/uisearch.js"></script>
+                                    <script>
+                                        new UISearch(document.getElementById('sb-search'));
+                                    </script>
+                                    <!-- //search-scripts -->
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+                                            class="fa fa-bell"></i><span class="badge blue">3</span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="notification_header">
+                                                <h3>You have 3 new notification</h3>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">
+                                                <div class="user_img"><img src="images/1.png" alt=""></div>
+                                                <div class="notification_desc">
+                                                    <p>Lorem ipsum dolor sit amet</p>
+                                                    <p><span>1 hour ago</span></p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a></li>
+                                        <li class="odd"><a href="#">
+                                                <div class="user_img"><img src="images/1.png" alt=""></div>
+                                                <div class="notification_desc">
+                                                    <p>Lorem ipsum dolor sit amet </p>
+                                                    <p><span>1 hour ago</span></p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a></li>
+                                        <li><a href="#">
+                                                <div class="user_img"><img src="images/1.png" alt=""></div>
+                                                <div class="notification_desc">
+                                                    <p>Lorem ipsum dolor sit amet </p>
+                                                    <p><span>1 hour ago</span></p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a></li>
+                                        <li>
+                                            <div class="notification_bottom">
+                                                <a href="#">See all notification</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+                                            class="fa fa-tasks"></i><span class="badge blue1">22</span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="notification_header">
+                                                <h3>You have 8 pending task</h3>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">
+                                                <div class="task-info">
+                                                    <span class="task-desc">Database update</span><span
+                                                        class="percentage">40%</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="progress progress-striped active">
+                                                    <div class="bar yellow" style="width:40%;"></div>
+                                                </div>
+                                            </a></li>
+                                        <li><a href="#">
+                                                <div class="task-info">
+                                                    <span class="task-desc">Dashboard done</span><span
+                                                        class="percentage">90%</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
 
-                <div class="row-one widgettable">
-
-                    <div class="clearfix"> </div>
-                </div>
-
-
-
-
-                <!-- for amcharts js -->
-                <script src="{{ asset('/') }}admin/js/amcharts.js"></script>
-                <script src="{{ asset('/') }}admin/js/serial.js"></script>
-                <script src="{{ asset('/') }}admin/js/export.min.js"></script>
-                <link rel="stylesheet" href="{{ asset('/') }}admin/css/export.css" type="text/css" media="all" />
-                <script src="{{ asset('/') }}admin/js/light.js"></script>
-                <!-- for amcharts js -->
-
-                <script src="{{ asset('/') }}admin/js/index1.js"></script>
-
-
-
+                                                <div class="progress progress-striped active">
+                                                    <div class="bar green" style="width:90%;"></div>
+                                                </div>
+                                            </a></li>
+                                        <li><a href="#">
+                                                <div class="task-info">
+                                                    <span class="task-desc">Mobile App</span><span
+                                                        class="percentage">33%</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="progress progress-striped active">
+                                                    <div class="bar red" style="width: 33%;"></div>
+                                                </div>
+                                            </a></li>
+                                        <li><a href="#">
+                                                <div class="task-info">
+                                                    <span class="task-desc">Issues fixed</span><span
+                                                        class="percentage">80%</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="progress progress-striped active">
+                                                    <div class="bar  blue" style="width: 80%;"></div>
+                                                </div>
+                                            </a></li>
+                                        <li>
+                                            <div class="notification_bottom">
+                                                <a href="#">See all pending task</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </div>
+                        <div class="profile_details">
+                            <ul>
+                                <li class="dropdown profile_details_drop">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <div class="profile_img">
+                                            <span style="background:url(images/1.jpg) no-repeat center"> </span>
+                                            <div class="user-name">
+                                                <p>Michael<span>Administrator</span></p>
+                                            </div>
+                                            <i class="lnr lnr-chevron-down"></i>
+                                            <i class="lnr lnr-chevron-up"></i>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu drp-mnu">
+                                        <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
+                                        <li> <a href="#"><i class="fa fa-user"></i>Profile</a> </li>
+                                        <li> <a href="sign-up.html"><i class="fa fa-sign-out"></i> Logout</a> </li>
+                                    </ul>
+                                </li>
+                                <div class="clearfix"> </div>
+                            </ul>
+                        </div>
+                        <div class="social_icons">
+                            <div class="col-md-4 social_icons-left">
+                                <a href="#" class="yui"><i
+                                        class="fa fa-facebook i1"></i><span>300<sup>+</sup> Likes</span></a>
+                            </div>
+                            <div class="col-md-4 social_icons-left pinterest">
+                                <a href="#"><i class="fa fa-google-plus i1"></i><span>500<sup>+</sup> Shares</span></a>
+                            </div>
+                            <div class="col-md-4 social_icons-left twi">
+                                <a href="#"><i class="fa fa-twitter i1"></i><span>500<sup>+</sup> Tweets</span></a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div> --}}
+                <!--notification menu end -->
             </div>
+            <!-- //header-ends -->
+            {{-- <div id="page-wrapper">
+                <div class="graphs">
+                    <div class="col_3">
+                        <div class="col-md-3 widget widget1">
+                            <div class="r3_counter_box">
+                                <i class="fa fa-mail-forward"></i>
+                                <div class="stats">
+                                    <h5>45 <span>%</span></h5>
+                                    <div class="grow">
+                                        <p>Growth</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 widget widget1">
+                            <div class="r3_counter_box">
+                                <i class="fa fa-users"></i>
+                                <div class="stats">
+                                    <h5>50 <span>%</span></h5>
+                                    <div class="grow grow1">
+                                        <p>New Users</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 widget widget1">
+                            <div class="r3_counter_box">
+                                <i class="fa fa-eye"></i>
+                                <div class="stats">
+                                    <h5>70 <span>%</span></h5>
+                                    <div class="grow grow3">
+                                        <p>Visitors</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 widget">
+                            <div class="r3_counter_box">
+                                <i class="fa fa-usd"></i>
+                                <div class="stats">
+                                    <h5>70 <span>%</span></h5>
+                                    <div class="grow grow2">
+                                        <p>Profit</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <!-- switches -->
+                    <div class="switches">
+                        <div class="col-4">
+                            <div class="col-md-4 switch-right">
+                                <div class="switch-right-grid">
+                                    <div class="switch-right-grid1">
+                                        <h3>TODAY'S STATS</h3>
+                                        <p>Duis aute irure dolor in reprehenderit.</p>
+                                        <ul>
+                                            <li>Earning: $400 USD</li>
+                                            <li>Items Sold: 20 Items</li>
+                                            <li>Last Hour Sales: $34 USD</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sparkline">
+                                    <canvas id="line" height="150" width="480"
+                                        style="width: 480px; height: 150px;"></canvas>
+                                    <script>
+                                        var lineChartData = {
+                                            labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Mon"],
+                                            datasets: [{
+                                                fillColor: "#fff",
+                                                strokeColor: "#F44336",
+                                                pointColor: "#fbfbfb",
+                                                pointStrokeColor: "#F44336",
+                                                data: [20, 35, 45, 30, 10, 65, 40]
+                                            }]
+
+                                        };
+                                        new Chart(document.getElementById("line").getContext("2d")).Line(lineChartData);
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="col-md-4 switch-right">
+                                <div class="switch-right-grid">
+                                    <div class="switch-right-grid1">
+                                        <h3>MONTHLY STATS</h3>
+                                        <p>Duis aute irure dolor in reprehenderit.</p>
+                                        <ul>
+                                            <li>Earning: $5,000 USD</li>
+                                            <li>Items Sold: 400 Items</li>
+                                            <li>Last Hour Sales: $2,434 USD</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sparkline">
+                                    <canvas id="bar" height="150" width="480"
+                                        style="width: 480px; height: 150px;"></canvas>
+                                    <script>
+                                        var barChartData = {
+                                            labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Mon", "Tue", "Wed", "Thu"],
+                                            datasets: [{
+                                                    fillColor: "#8BC34A",
+                                                    strokeColor: "#8BC34A",
+                                                    data: [25, 40, 50, 65, 55, 30, 20, 10, 6, 4]
+                                                },
+                                                {
+                                                    fillColor: "#8BC34A",
+                                                    strokeColor: "#8BC34A",
+                                                    data: [30, 45, 55, 70, 40, 25, 15, 8, 5, 2]
+                                                }
+                                            ]
+
+                                        };
+                                        new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="col-md-4 switch-right">
+                                <div class="switch-right-grid">
+                                    <div class="switch-right-grid1">
+                                        <h3>ALLTIME STATS</h3>
+                                        <p>Duis aute irure dolor in reprehenderit.</p>
+                                        <ul>
+                                            <li>Earning: $80,000 USD</li>
+                                            <li>Items Sold: 8,000 Items</li>
+                                            <li>Last Hour Sales: $75,434 USD</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sparkline">
+                                    <!--graph-->
+                                    <link rel="stylesheet" href="{{ asset('/') }}admin/css/graph.css">
+                                    <script src="{{ asset('/') }}admin/js/jquery.flot.min.js"></script>
+                                    <!--//graph-->
+                                    <script>
+                                        $(document).ready(function() {
+
+                                            // Graph Data ##############################################
+                                            var graphData = [{
+                                                // Returning Visits
+                                                data: [
+                                                    [4, 4500],
+                                                    [5, 3500],
+                                                    [6, 6550],
+                                                    [7, 7600],
+                                                    [8, 4500],
+                                                    [9, 3500],
+                                                    [10, 6550],
+                                                ],
+                                                color: '#FFCA28',
+                                                points: {
+                                                    radius: 7,
+                                                    fillColor: '#fff'
+                                                }
+                                            }];
+
+                                            // Lines Graph #############################################
+                                            $.plot($('#graph-lines'), graphData, {
+                                                series: {
+                                                    points: {
+                                                        show: true,
+                                                        radius: 1
+                                                    },
+                                                    lines: {
+                                                        show: true
+                                                    },
+                                                    shadowSize: 0
+                                                },
+                                                grid: {
+                                                    color: '#fff',
+                                                    borderColor: 'transparent',
+                                                    borderWidth: 10,
+                                                    hoverable: true
+                                                },
+                                                xaxis: {
+                                                    tickColor: 'transparent',
+                                                    tickDecimals: false
+                                                },
+                                                yaxis: {
+                                                    tickSize: 1200
+                                                }
+                                            });
+
+                                            // Graph Toggle ############################################
+                                            $('#graph-bars').hide();
+
+                                            $('#lines').on('click', function(e) {
+                                                $('#bars').removeClass('active');
+                                                $('#graph-bars').fadeOut();
+                                                $(this).addClass('active');
+                                                $('#graph-lines').fadeIn();
+                                                e.preventDefault();
+                                            });
+
+                                            $('#bars').on('click', function(e) {
+                                                $('#lines').removeClass('active');
+                                                $('#graph-lines').fadeOut();
+                                                $(this).addClass('active');
+                                                $('#graph-bars').fadeIn().removeClass('hidden');
+                                                e.preventDefault();
+                                            });
+
+                                        });
+                                    </script>
+                                    <div id="graph-wrapper">
+                                        <div class="graph-container">
+                                            <div id="graph-lines"> </div>
+                                            <div id="graph-bars"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!-- //switches -->
+                    <div class="col_1">
+                        <div class="col-md-4 span_8">
+                            <div class="activity_box">
+                                <h3>Inbox</h3>
+                                <div class="scrollbar scrollbar1" id="style-2">
+                                    <div class="activity-row">
+                                        <div class="col-xs-3 activity-img"><img src='images/1.png'
+                                                class="img-responsive" alt="" /></div>
+                                        <div class="col-xs-7 activity-desc">
+                                            <h5><a href="#">John Smith</a></h5>
+                                            <p>Hey ! There I'm available.</p>
+                                        </div>
+                                        <div class="col-xs-2 activity-desc1">
+                                            <h6>13:40 PM</h6>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                    <div class="activity-row">
+                                        <div class="col-xs-3 activity-img"><img src='images/5.png'
+                                                class="img-responsive" alt="" /></div>
+                                        <div class="col-xs-7 activity-desc">
+                                            <h5><a href="#">Andrew Jos</a></h5>
+                                            <p>Hey ! There I'm available.</p>
+                                        </div>
+                                        <div class="col-xs-2 activity-desc1">
+                                            <h6>13:40 PM</h6>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                    <div class="activity-row">
+                                        <div class="col-xs-3 activity-img"><img src='images/3.png'
+                                                class="img-responsive" alt="" /></div>
+                                        <div class="col-xs-7 activity-desc">
+                                            <h5><a href="#">Adom Smith</a></h5>
+                                            <p>Hey ! There I'm available.</p>
+                                        </div>
+                                        <div class="col-xs-2 activity-desc1">
+                                            <h6>13:40 PM</h6>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                    <div class="activity-row">
+                                        <div class="col-xs-3 activity-img"><img src='images/4.png'
+                                                class="img-responsive" alt="" /></div>
+                                        <div class="col-xs-7 activity-desc">
+                                            <h5><a href="#">Peter Carl</a></h5>
+                                            <p>Hey ! There I'm available.</p>
+                                        </div>
+                                        <div class="col-xs-2 activity-desc1">
+                                            <h6>13:40 PM</h6>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                    <div class="activity-row">
+                                        <div class="col-xs-3 activity-img"><img src='images/1.png'
+                                                class="img-responsive" alt="" /></div>
+                                        <div class="col-xs-7 activity-desc">
+                                            <h5><a href="#">John Smith</a></h5>
+                                            <p>Hey ! There I'm available.</p>
+                                        </div>
+                                        <div class="col-xs-2 activity-desc1">
+                                            <h6>13:40 PM</h6>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 span_8">
+                            <div class="activity_box activity_box1">
+                                <h3>chat</h3>
+                                <div class="scrollbar" id="style-2">
+                                    <div class="activity-row activity-row1">
+                                        <div class="col-xs-3 activity-img"><img src='images/1.png'
+                                                class="img-responsive" alt="" /><span>10:00 PM</span></div>
+                                        <div class="col-xs-5 activity-img1">
+                                            <div class="activity-desc-sub">
+                                                <h5>John Smith</h5>
+                                                <p>Hello !</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 activity-desc1"></div>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                    <div class="activity-row activity-row1">
+                                        <div class="col-xs-2 activity-desc1"></div>
+                                        <div class="col-xs-7 activity-img2">
+                                            <div class="activity-desc-sub1">
+                                                <h5>Adom Smith</h5>
+                                                <p>Hi,How are you ? What about our next meeting?</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3 activity-img"><img src='images/3.png'
+                                                class="img-responsive" alt="" /><span>10:02 PM</span></div>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                    <div class="activity-row activity-row1">
+                                        <div class="col-xs-3 activity-img"><img src='images/1.png'
+                                                class="img-responsive" alt="" /><span>10:00 PM</span></div>
+                                        <div class="col-xs-5 activity-img1">
+                                            <div class="activity-desc-sub">
+                                                <h5>John Smith</h5>
+                                                <p>Yeah fine</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 activity-desc1"></div>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                    <div class="activity-row activity-row1">
+                                        <div class="col-xs-2 activity-desc1"></div>
+                                        <div class="col-xs-7 activity-img2">
+                                            <div class="activity-desc-sub1">
+                                                <h5>Adom Smith</h5>
+                                                <p>Wow that's great</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3 activity-img"><img src='images/3.png'
+                                                class="img-responsive" alt="" /><span>10:02 PM</span></div>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                </div>
+                                <form>
+                                    <input type="text" value="Enter your text" onfocus="this.value = '';"
+                                        onblur="if (this.value == '') {this.value = 'Enter your text';}" required="">
+                                    <input type="submit" value="Send" required="" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4 span_8">
+                            <div class="activity_box activity_box2">
+                                <h3>todo</h3>
+                                <div class="scrollbar" id="style-2">
+                                    <div class="activity-row activity-row1">
+                                        <div class="single-bottom">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="brand" value="">
+                                                    <label for="brand"><span></span> Sunt in culpa qui officia.</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="brand1" value="">
+                                                    <label for="brand1"><span></span> Fugiat quo voluptas nulla.</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="brand2" value="">
+                                                    <label for="brand2"><span></span> Dolorem eum.</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="brand9" value="">
+                                                    <label for="brand9"><span></span> Pain that produces no
+                                                        resultant.</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="brand8" value="">
+                                                    <label for="brand8"><span></span> Cupidatat non proident.</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="brand7" value="">
+                                                    <label for="brand7"><span></span> Praising pain was born.</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="brand3" value="">
+                                                    <label for="brand3"><span></span> Computer & Electronics</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="brand4" value="">
+                                                    <label for="brand4"><span></span> Dolorem ipsum quia.</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="brand5" value="">
+                                                    <label for="brand5"><span></span> Consequatur aut
+                                                        perferendis.</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="brand6" value="">
+                                                    <label for="brand6"><span></span> Dolorem ipsum quia.</label>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form>
+                                    <input type="text" value="Enter your text" onfocus="this.value = '';"
+                                        onblur="if (this.value == '') {this.value = 'Enter your text';}" required="">
+                                    <input type="submit" value="Submit" required="" />
+                                </form>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="clearfix"> </div>
+
+                    </div>
+                </div>
+                <!--body wrapper start-->
+            </div> --}}
+            <!--body wrapper end-->
         </div>
-        <!--footer-->
-        <div class="footer">
-            <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href="https://w3layouts.com/"
-                    target="_blank">w3layouts</a></p>
-        </div>
-        <!--//footer-->
-    </div>
+        <!--footer section start-->
+        <footer>
+            <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="https://w3layouts.com/"
+                    target="_blank">w3layouts.</a></p>
+        </footer>
+        <!--footer section end-->
 
-    <!-- new added graphs chart js-->
+        <!-- main content end-->
+    </section>
 
-    <script src="{{ asset('/') }}admin/js/Chart.bundle.js"></script>
-    <script src="{{ asset('/') }}admin/js/utils.js"></script>
-
-    <script>
-        var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
-            "November", "December"
-        ];
-        var color = Chart.helpers.color;
-        var barChartData = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [{
-                label: 'Dataset 1',
-                backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
-                borderColor: window.chartColors.red,
-                borderWidth: 1,
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor()
-                ]
-            }, {
-                label: 'Dataset 2',
-                backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
-                borderColor: window.chartColors.blue,
-                borderWidth: 1,
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor()
-                ]
-            }]
-
-        };
-
-        window.onload = function() {
-            var ctx = document.getElementById("canvas").getContext("2d");
-            window.myBar = new Chart(ctx, {
-                type: 'bar',
-                data: barChartData,
-                options: {
-                    responsive: true,
-                    legend: {
-                        position: 'top',
-                    },
-                    title: {
-                        display: true,
-                        text: 'Chart.js Bar Chart'
-                    }
-                }
-            });
-
-        };
-
-        document.getElementById('randomizeData').addEventListener('click', function() {
-            var zero = Math.random() < 0.2 ? true : false;
-            barChartData.datasets.forEach(function(dataset) {
-                dataset.data = dataset.data.map(function() {
-                    return zero ? 0.0 : randomScalingFactor();
-                });
-
-            });
-            window.myBar.update();
-        });
-
-        var colorNames = Object.keys(window.chartColors);
-        document.getElementById('addDataset').addEventListener('click', function() {
-            var colorName = colorNames[barChartData.datasets.length % colorNames.length];;
-            var dsColor = window.chartColors[colorName];
-            var newDataset = {
-                label: 'Dataset ' + barChartData.datasets.length,
-                backgroundColor: color(dsColor).alpha(0.5).rgbString(),
-                borderColor: dsColor,
-                borderWidth: 1,
-                data: []
-            };
-
-            for (var index = 0; index < barChartData.labels.length; ++index) {
-                newDataset.data.push(randomScalingFactor());
-            }
-
-            barChartData.datasets.push(newDataset);
-            window.myBar.update();
-        });
-
-        document.getElementById('addData').addEventListener('click', function() {
-            if (barChartData.datasets.length > 0) {
-                var month = MONTHS[barChartData.labels.length % MONTHS.length];
-                barChartData.labels.push(month);
-
-                for (var index = 0; index < barChartData.datasets.length; ++index) {
-                    //window.myBar.addData(randomScalingFactor(), index);
-                    barChartData.datasets[index].data.push(randomScalingFactor());
-                }
-
-                window.myBar.update();
-            }
-        });
-
-        document.getElementById('removeDataset').addEventListener('click', function() {
-            barChartData.datasets.splice(0, 1);
-            window.myBar.update();
-        });
-
-        document.getElementById('removeData').addEventListener('click', function() {
-            barChartData.labels.splice(-1, 1); // remove the label first
-
-            barChartData.datasets.forEach(function(dataset, datasetIndex) {
-                dataset.data.pop();
-            });
-
-            window.myBar.update();
-        });
-    </script>
-    <!-- new added graphs chart js-->
-
-    <!-- Classie -->
-    <!-- for toggle left push menu script -->
-    <script src="{{ asset('/') }}admin/js/classie.js"></script>
-    <script>
-        var menuLeft = document.getElementById('cbp-spmenu-s1'),
-            showLeftPush = document.getElementById('showLeftPush'),
-            body = document.body;
-
-        showLeftPush.onclick = function() {
-            classie.toggle(this, 'active');
-            classie.toggle(body, 'cbp-spmenu-push-toright');
-            classie.toggle(menuLeft, 'cbp-spmenu-open');
-            disableOther('showLeftPush');
-        };
-
-
-        function disableOther(button) {
-            if (button !== 'showLeftPush') {
-                classie.toggle(showLeftPush, 'disabled');
-            }
-        }
-    </script>
-    <!-- //Classie -->
-    <!-- //for toggle left push menu script -->
-
-    <!--scrolling js-->
     <script src="{{ asset('/') }}admin/js/jquery.nicescroll.js"></script>
     <script src="{{ asset('/') }}admin/js/scripts.js"></script>
-    <!--//scrolling js-->
-
-    <!-- side nav js -->
-    <script src='{{ asset('/') }}admin/js/SidebarNav.min.js' type='text/javascript'></script>
-    <script>
-        $('.sidebar-menu').SidebarNav()
-    </script>
-    <!-- //side nav js -->
-
-    <!-- for index page weekly sales java script -->
-    <script src="{{ asset('/') }}admin/js/SimpleChart.js"></script>
-    <script>
-        var graphdata1 = {
-            linecolor: "#CCA300",
-            title: "Monday",
-            values: [{
-                    X: "6:00",
-                    Y: 10.00
-                },
-                {
-                    X: "7:00",
-                    Y: 20.00
-                },
-                {
-                    X: "8:00",
-                    Y: 40.00
-                },
-                {
-                    X: "9:00",
-                    Y: 34.00
-                },
-                {
-                    X: "10:00",
-                    Y: 40.25
-                },
-                {
-                    X: "11:00",
-                    Y: 28.56
-                },
-                {
-                    X: "12:00",
-                    Y: 18.57
-                },
-                {
-                    X: "13:00",
-                    Y: 34.00
-                },
-                {
-                    X: "14:00",
-                    Y: 40.89
-                },
-                {
-                    X: "15:00",
-                    Y: 12.57
-                },
-                {
-                    X: "16:00",
-                    Y: 28.24
-                },
-                {
-                    X: "17:00",
-                    Y: 18.00
-                },
-                {
-                    X: "18:00",
-                    Y: 34.24
-                },
-                {
-                    X: "19:00",
-                    Y: 40.58
-                },
-                {
-                    X: "20:00",
-                    Y: 12.54
-                },
-                {
-                    X: "21:00",
-                    Y: 28.00
-                },
-                {
-                    X: "22:00",
-                    Y: 18.00
-                },
-                {
-                    X: "23:00",
-                    Y: 34.89
-                },
-                {
-                    X: "0:00",
-                    Y: 40.26
-                },
-                {
-                    X: "1:00",
-                    Y: 28.89
-                },
-                {
-                    X: "2:00",
-                    Y: 18.87
-                },
-                {
-                    X: "3:00",
-                    Y: 34.00
-                },
-                {
-                    X: "4:00",
-                    Y: 40.00
-                }
-            ]
-        };
-        var graphdata2 = {
-            linecolor: "#00CC66",
-            title: "Tuesday",
-            values: [{
-                    X: "6:00",
-                    Y: 100.00
-                },
-                {
-                    X: "7:00",
-                    Y: 120.00
-                },
-                {
-                    X: "8:00",
-                    Y: 140.00
-                },
-                {
-                    X: "9:00",
-                    Y: 134.00
-                },
-                {
-                    X: "10:00",
-                    Y: 140.25
-                },
-                {
-                    X: "11:00",
-                    Y: 128.56
-                },
-                {
-                    X: "12:00",
-                    Y: 118.57
-                },
-                {
-                    X: "13:00",
-                    Y: 134.00
-                },
-                {
-                    X: "14:00",
-                    Y: 140.89
-                },
-                {
-                    X: "15:00",
-                    Y: 112.57
-                },
-                {
-                    X: "16:00",
-                    Y: 128.24
-                },
-                {
-                    X: "17:00",
-                    Y: 118.00
-                },
-                {
-                    X: "18:00",
-                    Y: 134.24
-                },
-                {
-                    X: "19:00",
-                    Y: 140.58
-                },
-                {
-                    X: "20:00",
-                    Y: 112.54
-                },
-                {
-                    X: "21:00",
-                    Y: 128.00
-                },
-                {
-                    X: "22:00",
-                    Y: 118.00
-                },
-                {
-                    X: "23:00",
-                    Y: 134.89
-                },
-                {
-                    X: "0:00",
-                    Y: 140.26
-                },
-                {
-                    X: "1:00",
-                    Y: 128.89
-                },
-                {
-                    X: "2:00",
-                    Y: 118.87
-                },
-                {
-                    X: "3:00",
-                    Y: 134.00
-                },
-                {
-                    X: "4:00",
-                    Y: 180.00
-                }
-            ]
-        };
-        var graphdata3 = {
-            linecolor: "#FF99CC",
-            title: "Wednesday",
-            values: [{
-                    X: "6:00",
-                    Y: 230.00
-                },
-                {
-                    X: "7:00",
-                    Y: 210.00
-                },
-                {
-                    X: "8:00",
-                    Y: 214.00
-                },
-                {
-                    X: "9:00",
-                    Y: 234.00
-                },
-                {
-                    X: "10:00",
-                    Y: 247.25
-                },
-                {
-                    X: "11:00",
-                    Y: 218.56
-                },
-                {
-                    X: "12:00",
-                    Y: 268.57
-                },
-                {
-                    X: "13:00",
-                    Y: 274.00
-                },
-                {
-                    X: "14:00",
-                    Y: 280.89
-                },
-                {
-                    X: "15:00",
-                    Y: 242.57
-                },
-                {
-                    X: "16:00",
-                    Y: 298.24
-                },
-                {
-                    X: "17:00",
-                    Y: 208.00
-                },
-                {
-                    X: "18:00",
-                    Y: 214.24
-                },
-                {
-                    X: "19:00",
-                    Y: 214.58
-                },
-                {
-                    X: "20:00",
-                    Y: 211.54
-                },
-                {
-                    X: "21:00",
-                    Y: 248.00
-                },
-                {
-                    X: "22:00",
-                    Y: 258.00
-                },
-                {
-                    X: "23:00",
-                    Y: 234.89
-                },
-                {
-                    X: "0:00",
-                    Y: 210.26
-                },
-                {
-                    X: "1:00",
-                    Y: 248.89
-                },
-                {
-                    X: "2:00",
-                    Y: 238.87
-                },
-                {
-                    X: "3:00",
-                    Y: 264.00
-                },
-                {
-                    X: "4:00",
-                    Y: 270.00
-                }
-            ]
-        };
-        var graphdata4 = {
-            linecolor: "Random",
-            title: "Thursday",
-            values: [{
-                    X: "6:00",
-                    Y: 300.00
-                },
-                {
-                    X: "7:00",
-                    Y: 410.98
-                },
-                {
-                    X: "8:00",
-                    Y: 310.00
-                },
-                {
-                    X: "9:00",
-                    Y: 314.00
-                },
-                {
-                    X: "10:00",
-                    Y: 310.25
-                },
-                {
-                    X: "11:00",
-                    Y: 318.56
-                },
-                {
-                    X: "12:00",
-                    Y: 318.57
-                },
-                {
-                    X: "13:00",
-                    Y: 314.00
-                },
-                {
-                    X: "14:00",
-                    Y: 310.89
-                },
-                {
-                    X: "15:00",
-                    Y: 512.57
-                },
-                {
-                    X: "16:00",
-                    Y: 318.24
-                },
-                {
-                    X: "17:00",
-                    Y: 318.00
-                },
-                {
-                    X: "18:00",
-                    Y: 314.24
-                },
-                {
-                    X: "19:00",
-                    Y: 310.58
-                },
-                {
-                    X: "20:00",
-                    Y: 312.54
-                },
-                {
-                    X: "21:00",
-                    Y: 318.00
-                },
-                {
-                    X: "22:00",
-                    Y: 318.00
-                },
-                {
-                    X: "23:00",
-                    Y: 314.89
-                },
-                {
-                    X: "0:00",
-                    Y: 310.26
-                },
-                {
-                    X: "1:00",
-                    Y: 318.89
-                },
-                {
-                    X: "2:00",
-                    Y: 518.87
-                },
-                {
-                    X: "3:00",
-                    Y: 314.00
-                },
-                {
-                    X: "4:00",
-                    Y: 310.00
-                }
-            ]
-        };
-        var Piedata = {
-            linecolor: "Random",
-            title: "Profit",
-            values: [{
-                    X: "Monday",
-                    Y: 50.00
-                },
-                {
-                    X: "Tuesday",
-                    Y: 110.98
-                },
-                {
-                    X: "Wednesday",
-                    Y: 70.00
-                },
-                {
-                    X: "Thursday",
-                    Y: 204.00
-                },
-                {
-                    X: "Friday",
-                    Y: 80.25
-                },
-                {
-                    X: "Saturday",
-                    Y: 38.56
-                },
-                {
-                    X: "Sunday",
-                    Y: 98.57
-                }
-            ]
-        };
-        $(function() {
-            $("#Bargraph").SimpleChart({
-                ChartType: "Bar",
-                toolwidth: "50",
-                toolheight: "25",
-                axiscolor: "#E6E6E6",
-                textcolor: "#6E6E6E",
-                showlegends: true,
-                data: [graphdata4, graphdata3, graphdata2, graphdata1],
-                legendsize: "140",
-                legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
-            });
-            $("#sltchartype").on('change', function() {
-                $("#Bargraph").SimpleChart('ChartType', $(this).val());
-                $("#Bargraph").SimpleChart('reload', 'true');
-            });
-            $("#Hybridgraph").SimpleChart({
-                ChartType: "Hybrid",
-                toolwidth: "50",
-                toolheight: "25",
-                axiscolor: "#E6E6E6",
-                textcolor: "#6E6E6E",
-                showlegends: true,
-                data: [graphdata4],
-                legendsize: "140",
-                legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
-            });
-            $("#Linegraph").SimpleChart({
-                ChartType: "Line",
-                toolwidth: "50",
-                toolheight: "25",
-                axiscolor: "#E6E6E6",
-                textcolor: "#6E6E6E",
-                showlegends: false,
-                data: [graphdata4, graphdata3, graphdata2, graphdata1],
-                legendsize: "140",
-                legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
-            });
-            $("#Areagraph").SimpleChart({
-                ChartType: "Area",
-                toolwidth: "50",
-                toolheight: "25",
-                axiscolor: "#E6E6E6",
-                textcolor: "#6E6E6E",
-                showlegends: true,
-                data: [graphdata4, graphdata3, graphdata2, graphdata1],
-                legendsize: "140",
-                legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
-            });
-            $("#Scatterredgraph").SimpleChart({
-                ChartType: "Scattered",
-                toolwidth: "50",
-                toolheight: "25",
-                axiscolor: "#E6E6E6",
-                textcolor: "#6E6E6E",
-                showlegends: true,
-                data: [graphdata4, graphdata3, graphdata2, graphdata1],
-                legendsize: "140",
-                legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
-            });
-            $("#Piegraph").SimpleChart({
-                ChartType: "Pie",
-                toolwidth: "50",
-                toolheight: "25",
-                axiscolor: "#E6E6E6",
-                textcolor: "#6E6E6E",
-                showlegends: true,
-                showpielables: true,
-                data: [Piedata],
-                legendsize: "250",
-                legendposition: 'right',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
-            });
-
-            $("#Stackedbargraph").SimpleChart({
-                ChartType: "Stacked",
-                toolwidth: "50",
-                toolheight: "25",
-                axiscolor: "#E6E6E6",
-                textcolor: "#6E6E6E",
-                showlegends: true,
-                data: [graphdata3, graphdata2, graphdata1],
-                legendsize: "140",
-                legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
-            });
-
-            $("#StackedHybridbargraph").SimpleChart({
-                ChartType: "StackedHybrid",
-                toolwidth: "50",
-                toolheight: "25",
-                axiscolor: "#E6E6E6",
-                textcolor: "#6E6E6E",
-                showlegends: true,
-                data: [graphdata3, graphdata2, graphdata1],
-                legendsize: "140",
-                legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
-            });
-        });
-    </script>
-    <!-- //for index page weekly sales java script -->
-
-
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ asset('/') }}admin/js/bootstrap.js"> </script>
-    <!-- //Bootstrap Core JavaScript -->
-
+    <script src="{{ asset('/') }}admin/js/bootstrap.min.js"></script>
 </body>
 
 </html>
